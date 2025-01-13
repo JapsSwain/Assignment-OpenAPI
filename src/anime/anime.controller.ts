@@ -6,7 +6,7 @@ import { AnimeService } from './anime.service';
 export class AnimeController {
   constructor(private readonly animeService: AnimeService) {}
 
-  // Route to search anime by query (e.g. "Naruto")
+  // SEARCH SESSION  http://localhost:3000/anime/search?query=Naruto
   @Get('search')
   async searchAnime(@Query('query') query: string) {
     return this.animeService.searchAnime(query);
